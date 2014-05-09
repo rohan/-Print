@@ -135,6 +135,7 @@
             jQuery('#flipcountdownbox1').flipcountdown({
                 tick:function() {
                     i = (i+1)%60;
+                    return i;
                 }
             });
         });
