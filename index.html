@@ -128,7 +128,9 @@
 
     <script type="text/javascript">
         jQuery(function() {
-            var i = 59;
+            var d = new Date();
+            var s = d.getSeconds();
+            var i = 60-s;
             jQuery('#flipcountdownbox1').flipcountdown({
                 tick:function() {
                     i--;
