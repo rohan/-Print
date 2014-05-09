@@ -1,7 +1,9 @@
 <?php
-$allowedExts = array("pdf", "txt", "doc");
+$allowedExts = array("pdf", "txt");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
+
+echo $_FILES["file"]["name"];
 
 if ((in_array($extension, $allowedExts))) {
   if ($_FILES["file"]["error"] > 0) {
