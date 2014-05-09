@@ -14,7 +14,6 @@ body {
 
 /* links */
 a, a:focus, a:hover {
-    color: white;
     border: none;
 }
 
