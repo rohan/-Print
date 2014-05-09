@@ -80,15 +80,15 @@
                 your files from anywhere on UT's campus (well, really anywhere
                 in the world). Just upload your file between 10 AM and 2 AM, and
                 I'll leave it in a folder outside my room (BLD 302).</p>
+                <p class="lead">If you find any bugs in this program, please
+                don't hesitate to email me at <a
+                    href="mailto:rohan@cs.utexas.edu">rohan@cs.utexas.edu</a>.</p>
                 <form action="upload_file.php" method="post"
                     enctype="multipart/form-data">
                     <label for="file">File:</label>
                     <input type="file" name="file" id="file"><br>
                     <input type="submit" name="submit" value="Submit">
                 </form>
-                <p class="lead">If you find any bugs in this program, please
-                don't hesitate to email me at <a
-                    href="mailto:rohan@cs.utexas.edu">rohan@cs.utexas.edu</a>.</p>
             </div>
         </div>
     </section>
@@ -117,17 +117,11 @@
             if($(document).width() > 787) {
                 $('#navigation').localScroll(5000);
                 $(document).localScroll(5000);
-                //$('#About').parallax("75%", 0.1);
-                //$('#Members').parallax("75%", 0.1);
-                //$('#Gallery').parallax("75%", 0.1);
-                //$('#Videos').parallax("75%", 0.1);
-                //$('#Contact').parallax("75%", 0.1);
             }
         });
 
         function setToViewPortHeight() {
             $('#About').css('height', window.innerHeight);
-            $('#Contact').css('height', window.innerHeight);
         }
     </script>
     <!--script>
