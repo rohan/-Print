@@ -86,7 +86,7 @@
                 </form>
                 
                 <p class="lead">Next print job:</p>
-                <div id="flipcountdownbox1"></div>
+                <div id="flipcountdownbox1">test</div>
             </div>
         </div>
     </section>
@@ -127,9 +127,9 @@
     </script>
 
     <script type="text/javascript">
-            jQuery('#flipcountdownbox1').flipcountdown({
-                size: "lg"
-            })
+        jQuery('#flipcountdownbox1').flipcountdown({
+            showHour: false, showMinute: false, showSecond: true
+        })
     </script>
     <!--script>
         document.getElementById('links').onclick = function (event) {
