@@ -14,11 +14,6 @@
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-    <!-- gallery -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="css/blueimp-image-gallery.min.css">
-
 	<link rel="stylesheet" href="css/styles.css" >
     <link rel="stylesheet" href="css/animate.css">
     
@@ -116,7 +111,7 @@
                 $('#navigation').localScroll(5000);
                 $(document).localScroll(5000);
             }
-            $(":file").filestyle();
+            $(":file").filestyle({icon: false});
         });
 
         function setToViewPortHeight() {
