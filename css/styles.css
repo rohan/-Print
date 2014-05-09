@@ -32,7 +32,7 @@ a, a:focus, a:hover {
     font-family: 'Roboto', sans-serif;
 }
 
-p, label {
+p, label, input {
     padding: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
