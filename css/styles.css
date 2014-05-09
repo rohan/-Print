@@ -7,9 +7,9 @@ html, body {
 
 body {
     text-align: center;
-    color: white;
+    color: black;
     text-shadow: 0 1px 1px rgba(0,0,0,.5);
-    background-color: black;
+    background-color: white;
 }
 
 /* links */
@@ -39,10 +39,6 @@ p, label, input {
     text-align: center;
 }
 
-a {
-    color: white;
-}
-
 /* sections */
 .section {
     display: block;
@@ -54,7 +50,6 @@ a {
 
 #About {
     background-size: cover;
-    background-color: black;
 }
 
 .about-sect {
