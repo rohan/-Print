@@ -128,14 +128,13 @@
 
     <script type="text/javascript">
         jQuery(function(){
-            var i = 0;
-            jQuery('#flipcountdownbox1').flipcountdown({
-                tick:function() {
-                    //i = (i+1)%60;
+            var i = 1;
+            jQuery('#retroclockbox_counter').flipcountdown({
+                tick:function(){
                     return i++;
                 }
             });
-        });
+        })
     </script>
     <!--script>
         document.getElementById('links').onclick = function (event) {
