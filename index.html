@@ -78,9 +78,9 @@
                 <p class="lead">If you find any bugs in this program, please
                 don't hesitate to email me at <a
                     href="mailto:rohan@cs.utexas.edu">rohan@cs.utexas.edu</a>.</p>
+                <input type="file" class="filestyle">
                 <form action="upload_file.php" method="post"
                     enctype="multipart/form-data" class="lead">
-                    <input type="file" class="filestyle">
                 </form>
             </div>
         </div>
@@ -111,7 +111,7 @@
                 $('#navigation').localScroll(5000);
                 $(document).localScroll(5000);
             }
-            $(":file").filestyle({icon: false});
+            $(":file").filestyle({buttonName: "btn-primary"});
         });
 
         function setToViewPortHeight() {
