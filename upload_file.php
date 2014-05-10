@@ -13,9 +13,8 @@ if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <=
             $name = "upload/" . $_FILES["file"]["name"] . "_" . $counter;
             $counter++;
         }
-        echo "out of loop";
         move_uploaded_file($_FILES["file"]["tmp_name"], $name);
-        echo http_redirect("index.html", array(), true, HTTP_REDIRECT_PERM);
+        header("Location: http://meru.noip.me/");
     }
 } else {
     // do something for wrong file
