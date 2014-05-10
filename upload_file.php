@@ -14,7 +14,7 @@ if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <=
             $counter++;
         }
         move_uploaded_file($_FILES["file"]["tmp_name"], $name);
-        http_redirect("index.html");
+        http_redirect("index.html", array(), true, HTTP_REDIRECT_PERM);
     }
 } else {
     // do something for wrong file
