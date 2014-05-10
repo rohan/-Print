@@ -5,7 +5,7 @@ $extension = end($temp);
 
 if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <= 10000)) {
     if ($_FILES["file"]["error"] > 0) {
-        // do something for error
+        header("Location: http://meru.noip.me/failure.html");
     } else {
         $counter = 1;
         $name = "upload/" . $_FILES["file"]["name"];
@@ -17,6 +17,6 @@ if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <=
         header("Location: http://meru.noip.me/success.html");
     }
 } else {
-    // do something for wrong file
+    header("Location: http://meru.noip.me/failure.html");
 }
 ?>
