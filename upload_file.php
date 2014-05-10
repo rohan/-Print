@@ -14,7 +14,7 @@ if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <=
             $counter++;
         }
         move_uploaded_file($_FILES["file"]["tmp_name"], $name);
-        header("Location: http://meru.noip.me/");
+        header("Location: http://meru.noip.me/success.html");
     }
 } else {
     // do something for wrong file
