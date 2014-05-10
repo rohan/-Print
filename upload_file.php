@@ -7,6 +7,7 @@ if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <=
     if ($_FILES["file"]["error"] > 0) {
         // do something for error
     } else {
+        echo "in file";
         $counter = 1;
         $name = "upload/" . $_FILES["file"]["name"];
         while (file_exists($name)) {
