@@ -3,7 +3,7 @@ $allowedExts = array("pdf", "txt");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 
-echo "test " . vardump($temp) . "\n";
+echo "test " . var_dump($temp) . "\n";
 
 if ((in_array($extension, $allowedExts))) {
   if ($_FILES["file"]["error"] > 0) {
