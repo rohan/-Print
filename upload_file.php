@@ -3,8 +3,6 @@ $allowedExts = array("pdf", "txt");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 
-echo "test " . var_dump($_FILES["file"]["name"]). " " . var_dump($temp) . "\n";
-
 if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <= 10)) {
     if ($_FILES["file"]["error"] > 0) {
         // do something for error
