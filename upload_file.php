@@ -15,6 +15,8 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
         }
     }
 
+    echo $validExt;
+
     if ($validExt == FALSE) {
         header("Location: http://meru.noip.me/failure.html");
     }
@@ -29,7 +31,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
             $counter++;
         }
         move_uploaded_file($_FILES["file"]["tmp_name"], $name);
-        header("Location: http://meru.noip.me/success.html");
+        //header("Location: http://meru.noip.me/success.html");
     }
 } else {
     header("Location: http://meru.noip.me/failure.html");
