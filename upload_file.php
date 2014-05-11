@@ -9,7 +9,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
 
     $validExt = FALSE;
 
-    echo $name . " " . shell_exec("pwd && file upload/" . $name) . " ";
+    echo $name . " " . shell_exec("file upload/" . $name) . " ";
     foreach ($allowedExts as $ext) {
         if (strpos(shell_exec("file " . $name), $ext) !== FALSE) {
             $validExt = TRUE;
