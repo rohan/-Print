@@ -1,26 +1,13 @@
 <?php
-$allowedExts = array("PDF", "ASCII");
+$allowedExts = array("pdf", "txt");
+$allowedMimeTypes = array("application/pdf", "text/plain");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
+$MimeType = mime_content_type($_FILES["file"]["name"]);
 
 $name = $_FILES["file"]["tmp_name"];
 
-if (($_FILES["file"]["size"] / 1024) <= 10000) {
-
-    $validExt = FALSE;
-
-    foreach ($allowedExts as $ext) {
-        if (strpos(shell_exec("file " . $name), $ext) !== FALSE) {
-            $validExt = TRUE;
-            break;
-        }
-    }
-
-    if ($validExt == FALSE) {
-        header("Location: http://meru.noip.me/failure.html");
-        exit();
-    }
-
+if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <= 10000) && (in_array($MimeType, $allowedMimeTypes))) {
     if ($_FILES["file"]["error"] > 0) {
         header("Location: http://meru.noip.me/failure.html");
     } else {
