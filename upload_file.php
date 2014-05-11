@@ -18,6 +18,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
 
     if ($validExt == FALSE) {
         header("Location: http://meru.noip.me/failure.html");
+        exit();
     }
 
     if ($_FILES["file"]["error"] > 0) {
