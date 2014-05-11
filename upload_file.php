@@ -1,9 +1,24 @@
 <?php
-$allowedExts = array("pdf", "txt");
+$allowedExts = array("PDF", "ASCII");
 $temp = explode(".", $_FILES["file"]["name"]);
 $extension = end($temp);
 
-if ((in_array($extension, $allowedExts)) && (($_FILES["file"]["size"] / 1024) <= 10000)) {
+$name = $_FILES["file"]["name"];
+
+if (($_FILES["file"]["size"] / 1024) <= 10000) {
+
+    $validExt = FALSE;
+
+    foreach ($allowedExts as $ext) {
+        if (strpos(shell_exec("file " . $name), $ext) !== FALSE) {
+            $validExt = TRUE;
+        }
+    }
+
+    if ($validExt == FALSE) {
+        header("Location: http://meru.noip.me/failure.html");
+    }
+
     if ($_FILES["file"]["error"] > 0) {
         header("Location: http://meru.noip.me/failure.html");
     } else {
