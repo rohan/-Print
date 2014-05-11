@@ -10,7 +10,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
     $validExt = FALSE;
 
     foreach ($allowedExts as $ext) {
-        echo $ext;
+        echo $ext . " " . $name;
         if (strpos(shell_exec("file " . $name), $ext) !== FALSE) {
             $validExt = TRUE;
         }
