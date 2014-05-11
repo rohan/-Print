@@ -20,6 +20,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
     echo $validExt;
 
     if ($validExt == FALSE) {
+        echo "poop";
         //header("Location: http://meru.noip.me/failure.html");
     }
 
