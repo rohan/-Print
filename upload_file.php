@@ -9,10 +9,11 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
 
     $validExt = FALSE;
 
-    echo $name . " " . shell_exec("file upload/" . $name) . " ";
+    echo $name . " " . shell_exec("pwd && file upload/" . $name) . " ";
     foreach ($allowedExts as $ext) {
         if (strpos(shell_exec("file " . $name), $ext) !== FALSE) {
             $validExt = TRUE;
+            break;
         }
     }
 
@@ -31,7 +32,7 @@ if (($_FILES["file"]["size"] / 1024) <= 10000) {
             $name = "upload/" . $_FILES["file"]["name"] . "_" . $counter;
             $counter++;
         }
-        move_uploaded_file($_FILES["file"]["tmp_name"], $name);
+        //move_uploaded_file($_FILES["file"]["tmp_name"], $name);
         //header("Location: http://meru.noip.me/success.html");
     }
 } else {
